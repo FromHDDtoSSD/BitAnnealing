@@ -1,12 +1,19 @@
-# BitCrack
+# BitAnnealing
 
-A tool for brute-forcing Bitcoin private keys. The main purpose of this project is to contribute to the effort of solving the [Bitcoin puzzle transaction](https://blockchain.info/tx/08389f34c98c606322740c0be6a7125d9860bb8d5cb182c02f98461e5fa6cd15): A transaction with 32 addresses that become increasingly difficult to crack.
+BitAnnealing is a GPU-based experimental tool for analyzing the mapping between ECDSA private keys and their resulting Hash160 outputs.
 
+This project is derived from [BitCrack](https://github.com/brichard19/BitCrack), but with the address matching logic removed and a focus on deviation mapping, Hash160 structure, and annealing-style exploration.
 
-### Using BitCrack
+## Features
+- GPU-accelerated scalar multiplication (secp256k1)
+- SHA-256 and RIPEMD-160 hashing
+- Designed for key-to-hash statistical analysis
+- Supports CUDA (NVIDIA GPUs)
+
+## License
+MIT License. Original project by brichard19.
 
 #### Usage
-
 
 Use `cuBitCrack.exe` for CUDA devices and `clBitCrack.exe` for OpenCL devices.
 
